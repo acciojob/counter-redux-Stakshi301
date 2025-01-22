@@ -1,13 +1,16 @@
-
 import React from "react";
-import './../styles/App.css';
+import { Provider } from 'react-redux';
+import Counterdisplay from './counterDisplay';
+import Store from './store';
 
 const App = () => {
   return (
     <div>
-        {/* Do not remove the main div */}
+      <Provider store={Store}>
+        <Counterdisplay />
+      </Provider>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
